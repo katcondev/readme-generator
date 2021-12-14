@@ -1,7 +1,10 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-// const generatePage = require('./src/page-template');
-// const { writeFile, copyFile } = require('./utils/generate-site.js');
+const util = require("util");
+const fs = require('fs');
+const generateMarkdown = require("./utils/generateMarkdown.js")
+const writeFileAsync = util.promisify(fs.writeFile);
+
 
 // TODO: Create an array of questions for user input
 const questions = () => {
@@ -89,22 +92,50 @@ const questions = () => {
         name: "email",
         message: "Please enter your email: "
     }
-])
-   .then((res) => {
-    
-    })
-    .catch((err) => {
-    console.log(err);
-    })
+  ])
+  
 };
 
-console.log(res);
+// questions().then(answers => console.log(answers));
+
+
+     
 
 // // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
 
-// // TODO: Create a function to initialize app
-// function init() {}
+// const writeFile = fileContent => {
+//   return new Promise((resolve, reject) => {
+//     fs.writeFile('./dist/index.html', fileContent, err => {
+//       // if there's an error, reject the Promise and send the error to the Promise's `.catch()` method
+//       if (err) {
+//         reject(err);
+//         // return out of the function here to make sure the Promise doesn't accidentally execute the resolve() function as well
+//         return;
+//       }
+
+//       // if everything went well, resolve the Promise and send the successful data to the `.then()` method
+//       resolve({
+//         ok: true,
+//         message: 'File created!'
+//       });
+//     });
+//   });
+// };
+
+// Async function using util.promisify 
+async function init() {
+  try {
+      // Ask user questions and generate responses
+      const answers = await questions();
+      const generateContent = generateMarkdown(answers);
+      // Write new README.md to dist directory
+      await writeFileAsync('./dist/README.md', generateContent);
+      console.log('✔️  Successfully wrote to README.md');
+  }   catch(err) {
+      console.log(err);
+  }
+}
 
 // // Function call to initialize app
-// init();
+init();
