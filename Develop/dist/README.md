@@ -1,9 +1,9 @@
 
-<h1 align="center">dsfsdf 🚀 </h1>
+<h1 align="center">readMe Generator by K@ 🚀 </h1>
 
-![badge](https://img.shields.io/badge/license-Apache-brightgreen)<br />
+![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
 ## Description
-sdf
+This is a CLI application that generates a professionally stylized readme file after asking the user a series of questions about their project.
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
@@ -13,21 +13,28 @@ sdf
 - [Tests](#tests)
 - [Questions](#questions)
 ## Installation
-sdf
+This application requires that Node be installed along with the inquirer dependencies. Instructions on how to do so can be found here: https://www.npmjs.com/package/inquirer 
+
+[![IMAGE ALT TEXT HERE](./Develop/dist/ezgif-2-a647ac54d4.gif)](https://youtu.be/rhCwVU25R-g)
+
+
+
+https://youtu.be/rhCwVU25R-g
+
 ## Usage
-sdf
+It's for people that need a stylized readme file for their github projects.
 ## License
-![badge](https://img.shields.io/badge/license-Apache-brightgreen)
+![badge](https://img.shields.io/badge/license-MIT-brightgreen)
 <br />
-This application is covered by the Apache license. 
+This application is covered by the MIT license. 
 ## Contributing
-sdfds
+Kat Contreras, Xander Rapstine and gchoi2u.
 ## Tests
-sdf
+no
 ## Questions
-sdfdfsdf<br />
+Please email [kat.contreras@gmail.com](mailto:kat.contreras@gmail.com) with a screenshot of your error and a detailed description of your problem.<br /><br />
 <br />
-:octocat: Find me on GitHub: [sdfsd](https://github.com/sdfsd)<br />
+:octocat: Find me on GitHub: [katcontrerasdev](https://github.com/katcontrerasdev)<br />
 <br />
-Email me with any questions: fsdf<br /><br />
+Email me with any questions: kat.contreras@gmail.com<br /><br />
   
